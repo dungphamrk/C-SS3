@@ -1,0 +1,50 @@
+1.Cơ chế lưu trữ Biến
+    Biến cục bộ (Local variables):
+        Biến cục bộ là biến được khai báo và sử dụng chỉ trong phạm vi của một hàm hoặc khối mã.
+        Biến này chỉ tồn tại trong thời gian thực thi hàm hoặc khối mã trong đó nó được khai báo.
+
+    Biến toàn cục (Global variables):
+        Biến toàn cục là biến được khai báo ngoài tất cả các hàm và khối mã chính.
+        Biến này tồn tại suốt thời gian chạy của chương trình và có thể được truy cập từ bất kỳ hàm nào.
+
+    Biến tĩnh (Static variables):
+        Biến tĩnh là biến cục bộ hoặc biến toàn cục mà có thể được gắn với từ khóa "static."
+        Biến tĩnh cục bộ tồn tại suốt thời gian chạy của chương trình và giá trị của nó duy trì qua các lần gọi hàm.
+        Biến tĩnh toàn cục có phạm vi toàn cục, nhưng chỉ có thể truy cập từ file trong đó nó được khai báo.
+
+    Biến động (Dynamic variables):
+        Biến động là biến được tạo và quản lý thông qua các hàm như malloc, calloc, và realloc từ thư viện stdlib.h.
+        Biến động thường được sử dụng để lưu trữ dữ liệu có kích thước không biết trước hoặc khi cần thay đổi kích thước trong thời gian chạy.
+
+2.Toán tử 3 ngôi
+    Toán tử ba ngôi (ternary operator), còn được gọi là toán tử điều kiện, là một toán tử trong ngôn ngữ lập trình cho phép bạn thực
+hiện một quyết định dựa trên một điều kiện và trả về một giá trị dựa trên kết quả của điều kiện đó. 
+    num=(value) ? X:Y
+    trong đó value thuộc kiểu giá trị "boolean". KHi value=true thì num=X, value=false thì num =y;
+Toán tử ba ngôi rất hữu ích để viết ngắn gọn các biểu thức điều kiện, thay vì sử dụng câu lệnh điều kiện if...else
+
+
+3.boolean
+
+Kiểu dữ liệu 'bool' trong ngôn ngữ c thì khi dùng các thư viện cơ bản như <stdio.h> thì chỉ có 2 giá trị là :
+"true "  đại diện cho giá trị đúng, có giá trị số nguyên là 1.
+"false"    đại diện cho giá trị sai, có giá trị số nguyên là 0.
+
+Kiểu dữ liệu bool thường được sử dụng trong các tình huống đòi hỏi biểu thức điều kiện, chẳng hạn như trong câu lệnh if, while, và for.
+//1.Sử dụng thư viện <stdbool.h>:
+    #include <stdbool.h>
+    bool isTrue = true;
+    bool isFalse = false;
+//2.Sử dụng tiêu chuẩn định nghĩa:
+    typedef int bool;
+    #define true 1
+    #define false 0
+//3.Sử dụng kí hiệu số nguyên:
+    int isTrue = 1; // Đúng
+    int isFalse = 0; // Sai
+//4.Sử dụng bit:
+    unsigned char isTrue = 1; // Dùng 1 bit để biểu thị giá trị đúng (1)
+    unsigned char isFalse = 0; // Dùng 1 bit để biểu thị giá trị sai (0)
+
+
+4.
